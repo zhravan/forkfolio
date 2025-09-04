@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# OhMyFork.dev
+# OhMyFork Template
 
 Minimal portfolio & dev showcase
 
