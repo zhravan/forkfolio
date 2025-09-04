@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { FileIcon } from './FileIcon';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/dialog';
 import { loadContent } from '@/lib/content-loader';
 import type { WikiNote } from '@/types/content';
 
@@ -86,7 +87,7 @@ export function FileExplorer() {
             path: `/wiki/${n.slug}`,
           })),
       }));
-    return { name: 'wiki', type: 'directory', path: '/wiki', lastCommit: `Wiki: ${wikiItems.length} notes`, commitTime: `2 days ago` || latestStr, children: sectionNodes };
+  return { name: 'wiki', type: 'directory', path: '/wiki', lastCommit: `Wiki: ${wikiItems.length} notes`, commitTime: latestStr, children: sectionNodes };
   }, [wikiItems]);
 
   const fileStructure: FileNode[] = useMemo(() => {
@@ -198,30 +199,28 @@ export function FileExplorer() {
         ))}
       </div>
       {/* CV Modal */}
-      {showCVModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-2 sm:p-0">
-          <div className="bg-background rounded-lg shadow-lg max-w-full w-full sm:max-w-3xl p-2 sm:p-4 relative">
-            <button
-              className="absolute top-2 right-2 text-2xl text-muted-foreground hover:text-foreground"
-              onClick={() => setShowCVModal(false)}
-              aria-label="Close CV preview"
-            >
-              &times;
-            </button>
-            <h2 className="text-lg font-semibold mb-4">CV Preview</h2>
-            <div className="w-full h-[60vh] sm:h-[70vh] flex items-center justify-center">
-              <iframe
-                src={`${import.meta.env.BASE_URL}cv.pdf`}
-                title="CV PDF Preview"
-                className="w-full h-full rounded border border-border"
-                frameBorder="0"
-                aria-label="CV PDF Preview"
-                allow="autoplay"
-              />
+      <Dialog open={showCVModal} onOpenChange={setShowCVModal}>
+        <DialogContent className="max-w-4xl w-[95vw] h-[85vh] p-0">
+          <DialogHeader className="p-6 pb-0">
+            <DialogTitle>Curriculum Vitae</DialogTitle>
+            <DialogDescription>
+              View or download the CV below.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="p-6 pt-4 h-[calc(85vh-96px)]">
+            <iframe
+              src="/cv.pdf#view=fitH"
+              title="CV PDF"
+              className="w-full h-full rounded-md border"
+            />
+            <div className="mt-3 text-right">
+              <a href="/cv.pdf" download className="text-sm text-primary hover:underline">
+                Download PDF
+              </a>
             </div>
           </div>
-        </div>
-      )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

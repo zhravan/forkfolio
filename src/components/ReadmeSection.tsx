@@ -87,15 +87,7 @@ export function ReadmeSection() {
         <div className="p-3 sm:p-8 prose prose-slate dark:prose-invert max-w-none">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-8">
             <h1 className="flex items-center gap-2 sm:gap-3 text-lg sm:text-2xl font-bold">
-              👋 ‎ ‎ Hi there, I'm{" "}
-              <a
-                href="https://github.com/zhravan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary no-underline"
-              >
-                Shravan K B
-              </a>
+              👋 ‎ ‎ Hi there, I'm John Doe
             </h1>
 
             <Badge variant="secondary" className={`px-2 py-1 sm:px-3 transition-colors duration-500 ${animatedClass}`}>
@@ -108,7 +100,7 @@ export function ReadmeSection() {
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <MapPin className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                  <span className="text-foreground text-xs sm:text-base">Karnataka, India</span>
+                  <span className="text-foreground text-xs sm:text-base">Earth</span>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
                   <Calendar className="w-4 h-4 text-muted-foreground flex-shrink-0" />
@@ -120,25 +112,25 @@ export function ReadmeSection() {
               <h2 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-foreground">Connect</h2>
               <div className="grid grid-cols-1 xs:grid-cols-2 gap-2">
                 <Button asChild variant="outline" size="sm" className="justify-start w-full">
-                  <a href="https://github.com/zhravan" target="_blank" rel="noopener noreferrer" className="text-primary no-underline w-full flex items-center">
+                  <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="text-primary no-underline w-full flex items-center">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="sm" className="justify-start w-full">
-                  <a href="https://www.linkedin.com/in/zhravan/" target="_blank" rel="noopener noreferrer" className="text-primary no-underline w-full flex items-center">
+                  <a href="https://www.linkedin.com/in/your-handle/" target="_blank" rel="noopener noreferrer" className="text-primary no-underline w-full flex items-center">
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="sm" className="justify-start">
-                  <a href="https://x.com/zhravan" target="_blank" rel="noopener noreferrer" className="text-primary no-underline">
+                  <a href="https://x.com/your-handle" target="_blank" rel="noopener noreferrer" className="text-primary no-underline">
                     <span className="w-4 h-4 mr-2 flex items-center justify-center" style={{ fontWeight: 'bold', fontSize: '1.1em' }}>𝕏</span>
                     X
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="sm" className="justify-start">
-                  <a href="mailto:mrshravankumarb@gmail.com" className="text-primary no-underline">
+                  <a href="mailto:john@example.com" className="text-primary no-underline">
                     <Mail className="w-4 h-4 mr-2" />
                     Email
                   </a>
@@ -156,8 +148,8 @@ export function ReadmeSection() {
             {/* <div className="border border-border rounded-md overflow-hidden bg-background"> */}
             <img
               className="w-full h-auto object-cover"
-              src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/41a4xhwhc67u9k643a5u.png"
-              alt="zhravan / Shravan K B cover"
+              src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1974&auto=format&fit=crop"
+              alt="Cover image"
               loading="lazy"
               decoding="async"
             />
@@ -208,7 +200,7 @@ export function ReadmeSection() {
             <p className="italic text-muted-foreground text-lg leading-relaxed">
               Be brave enough to suck at something enough.
             </p>
-            <cite className="text-sm text-muted-foreground font-medium block mt-2">- Shravan Kumar B</cite>
+            <cite className="text-sm text-muted-foreground font-medium block mt-2">- John Doe</cite>
           </blockquote>
         </div>
       </div>

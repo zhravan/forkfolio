@@ -40,7 +40,7 @@ export default function Footer() {
           </span>
 
           <a
-            href="https://github.com/zhravan/ohmyfork"
+            href="https://github.com/your-username/your-repo"
             target="_blank"
             rel="noreferrer noopener"
             className="inline-flex items-center gap-1.5 rounded-full border border-border bg-muted/20 px-2.5 py-1 hover:bg-muted/30 transition-colors"
