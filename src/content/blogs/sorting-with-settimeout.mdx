@@ -1,11 +1,38 @@
 ---
-slug: "sorting-with-settimeout"
-title: "Sample Article"
-excerpt: "Placeholder blog content."
-readTime: "3 min"
-author: "John Doe"
-date: "2024-01-01"
-tags: ["placeholder"]
+title: "Sorting with setTimeout: A JavaScript Curiosity"
+excerpt: "A fun thought experiment: using setTimeout delays to print numbers in order and why it's not for production."
+date: "2025-08-10"
+readTime: "2 min read"
+tags: ["JavaScript", "Async", "Event Loop"]
+author: "Shravan K B"
 ---
 
-This is placeholder content for the template. Replace with your own article.
+# Sorting with setTimeout: A JavaScript Curiosity
+
+setTimeout function of the Web API's with Javascript; can sort an array.
+
+Example:
+
+```javascript
+[111, 20, 13, 4, 544, 32, 12, 414, 123].forEach((item) => {
+  setTimeout(() => console.log(item), item);
+});
+```
+
+The same works for negative as well,
+Example:
+
+```javascript
+let arr = [10, -100, 650, -25, 5, -50];
+
+const min = -Math.min(...arr);
+
+arr.forEach((item) => {
+  setTimeout(() => console.log(item), item + min);
+});
+```
+
+Any guesses how?
+Of course, not an efficient way to do it.
+
+Clue: Call-Stack and Web API's

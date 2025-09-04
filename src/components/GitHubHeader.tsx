@@ -12,7 +12,7 @@ export function GitHubHeader() {
   const { showMessage } = useMessageHandler();
 
   useEffect(() => {
-  const starred = localStorage.getItem('template-starred') === 'true';
+    const starred = localStorage.getItem('ohmyfork-starred') === 'true';
     setIsStarred(starred);
   }, []);
 
@@ -20,7 +20,7 @@ export function GitHubHeader() {
     const newStarred = !isStarred;
     setIsStarred(newStarred);
     setStarCount(prev => newStarred ? prev + 1 : prev - 1);
-  localStorage.setItem('template-starred', newStarred.toString());
+    localStorage.setItem('ohmyfork-starred', newStarred.toString());
 
     if (newStarred) {
       confetti({
@@ -67,11 +67,11 @@ export function GitHubHeader() {
           <div className="flex items-center gap-2 sm:gap-4 min-w-0">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">JD</span>
+                <span className="text-white font-bold text-sm">SKB</span>
               </div>
-              <span className="text-base sm:text-lg font-semibold text-foreground truncate">john-doe</span>
+              <span className="text-base sm:text-lg font-semibold text-foreground truncate">zhravan</span>
               <span className="text-muted-foreground">/</span>
-              <span className="text-base sm:text-lg font-semibold text-foreground truncate">your-repo</span>
+              <span className="text-base sm:text-lg font-semibold text-foreground truncate">ohmyfork</span>
             </div>
             <span className="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs font-semibold">
               Public
@@ -101,7 +101,7 @@ export function GitHubHeader() {
         {/* Repo actions row (below nav) */}
         <div className="flex items-center justify-between gap-3 flex-wrap py-3">
           <div className="flex items-center gap-2 min-w-0">
-            <span className="text-lg font-semibold text-foreground truncate">your-repo</span>
+            <span className="text-lg font-semibold text-foreground truncate">ohmyfork</span>
             <span className="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs font-semibold">
               Public
             </span>

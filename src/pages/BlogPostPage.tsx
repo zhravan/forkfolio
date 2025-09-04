@@ -47,10 +47,10 @@ export default function BlogPostPage() {
       {/* Giscus comments section for blog posts */}
       <div className="container mx-auto px-4">
         <GiscusComments
-          repo="your-username/your-repo"
-          repoId="YOUR_REPO_ID"
+          repo="zhravan/ohmyfork"
+          repoId="R_kgDOPQRINQ"
           category="General"
-          categoryId="YOUR_CATEGORY_ID"
+          categoryId="DIC_kwDOPQRINc4CtijM"
           mapping="pathname"
           reactionsEnabled="1"
           emitMetadata="0"
